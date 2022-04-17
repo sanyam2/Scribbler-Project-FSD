@@ -1,0 +1,28 @@
+/* To set the backgroud of the page*/
+body{
+    background: url("../images/background.jpg");
+    height: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center ;
+    background-size: cover;
+}
+
+/*For "Create Post" and "All Post" buttons*/
+.postBtn{
+    
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons{
+    background-color: #f0c000;
+    color: black;
+    padding: 10px 10px;
+    margin-left: 10px;
+    font-size: 90%;
+    font-weight: 500;
+}
+

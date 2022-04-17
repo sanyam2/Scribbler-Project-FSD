@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- TODO: Include Font Awesome file here -->
+    <!-- TODO: Include Google Fonts file here -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
+
+    <!--Local StyleSheets-->
+    <link rel="stylesheet" href="../css/post.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/font.css">
+
+    <!--Bootstrap Libraries-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!--Font Awesome Library-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="../js/post.js"></script>
+    
+</head>
+
+<body>
+    <!-- TODO: Include all your code for the header and home page here -->
+    <div class="header">
+        <input class= "topButtons" type="button" value="SignUp"  data-bs-toggle="modal" data-bs-target="#SignUpModel" >
+        <input class="topButtons" type="button" value="SignIn" data-bs-toggle="modal" data-bs-target="#SignInModel">
+
+        <p id="pageTitle" class="logo-title">ScriBBler</a>
+        <p class="middleText">Explore. Imagine. Create</p>
+
+    </div>
+
+
+
+     <!-- Sign Up Modal -->
+     <div class="modal fade" id="SignUpModel" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h2 class="modal-title  w-100 text-center " id="exampleModalLabel">Get Started</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+            <form>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Full Name</label>
+                  <input required type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Full Name">
+                </div>
+
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">UserName</label>
+                    <input required type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Username">
+                  </div>
+
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Password</label>
+                  <input required type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter Password">
+                </div>
+
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
+                    <input required type="password" class="form-control" id="exampleInputPassword1" placeholder="Confirm Password">
+                  </div>
+                
+                <button type="submit" class="btn btn-success  w-100 text-center">Sign Up</button>
+              </form>
+            </div>
+           
+        </div>
+        </div>
+    </div>
+
+
+    <!-- Sign In Modal -->
+    <div class="modal fade" id="SignInModel" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h2 class="modal-title  w-100 text-center" id="exampleModalLabel">Welcome Back</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+            <form>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Username</label>
+                  <input required type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Full Name">
+                </div>
+
+                
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Password</label>
+                  <input required type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter Password">
+                </div>
+
+                
+                
+                <button type="submit" class="btn btn-success  w-100 text-center">Sign In</button>
+              </form>
+
+              <div class="modal-header"></div>
+              <figure>
+                <blockquote class="blockquote">
+                    <div id="nm" class="mx-auto mt-3  w-100 text-center">Not a member? <span id="redirect" data-bs-target="#SignUpModel" data-bs-toggle="modal">Sign Up</span></div> 
+                </blockquote>
+              </figure>
+            </div>
+           
+        </div>
+        </div>
+    </div>
+
+
+    <!--Edit post code-->
+    <div class="PostTitle">
+        <h4 id="titleSolid" style="visibility: visible; display: block; " >The Legacy of Jimi Hendrix</h4>
+    </div>
+
+
+    <div class="EditPostTitle">
+        <textarea id="titleEdit" style=" width: 100%; visibility: hidden; display: none; text-align: center;"></textarea>
+    </div>
+
+
+    <div class="WholePostContent">
+        <div class="writerName">
+            <h3>Jimi</h3>
+        </div>
+        <div id="btnEdit" onclick="editPost()" class="editBtn">
+           <span id="EditAndSave"> Edit &nbsp </span><span id="toogleButtonIcon"><i  class="fa fa-edit"></i></span>
+        </div>
+
+        <!--Post Blog-->
+        <div  class="desc">
+            <p id="toBeEdited" style="visibility: visible; display: block;">James Marshall "Jimi" Hendrix (born Johnny Allen Hendrix; November 27, 1942 – September 18, 1970) was an American musician, singer, and songwriter. Although his mainstream career spanned only four years, he is widely regarded as one of the most influential electric guitarists in the history of popular music, and one of the most celebrated musicians of the 20th century. The Rock and Roll Hall of Fame describes him as "arguably the greatest instrumentalist in the history of rock music".Born in Seattle, Washington, Hendrix began playing guitar at the age of 15. In 1961, he enlisted in the US Army, but was discharged the following year. Soon afterward, he moved to Clarksville then Nashville, Tennessee, and began playing gigs on the chitlin' circuit, earning a place in the Isley Brothers' backing band and later with Little Richard, with whom he continued to work through mid-1965. He then played with Curtis Knight and the Squires before moving to England in late 1966 after bassist Chas Chandler of the Animals became his manager. Within months, Hendrix had earned three UK top ten hits with the Jimi Hendrix Experience: "Hey Joe", "Purple Haze", and "The Wind Cries Mary". He achieved fame in the US after his performance at the Monterey Pop Festival in 1967, and in 1968 his third and final studio album, Electric Ladyland, reached number one in the US. The double LP was Hendrix's most commercially successful release and his first and only number one album. The world's highest-paid performer, he headlined the Woodstock Festival in 1969 and the Isle of Wight Festival in 1970 before his accidental death in London from barbiturate-related asphyxia on September 18, 1970.Hendrix was inspired by American rock and roll and electric blues. He favored overdriven amplifiers with high volume and gain, and was instrumental in popularizing the previously undesirable sounds caused by guitar amplifier feedback. He was also one of the first guitarists to make extensive use of tone-altering effects units in mainstream rock, such as fuzz distortion, Octavia, wah-wah, and Uni-Vibe. He was the first musician to use stereophonic phasing effects in recordings. Holly George-Warren of Rolling Stone commented: "Hendrix pioneered the use of the instrument as an electronic sound source. Players before him had experimented with feedback and distortion, but Hendrix turned those effects and others into a controlled, fluid vocabulary every bit as personal as the blues with which he began."Hendrix was the recipient of several music awards during his lifetime and posthumously. In 1967, readers of Melody Maker voted him the Pop Musician of the Year and in 1968, Billboard named him the Artist of the Year and Rolling Stone declared him the Performer of the Year. Disc and Music Echo honored him with the World Top Musician of 1969 and in 1970, Guitar Player named him the Rock Guitarist of the Year. The Jimi Hendrix Experience was inducted into the Rock and Roll Hall of Fame in 1992 and the UK Music Hall of Fame in 2005. Rolling Stone ranked the band's three studio albums, Are You Experienced, Axis: Bold as Love, and Electric Ladyland, among the 100 greatest albums of all time, and they ranked Hendrix as the greatest guitarist and the sixth greatest artist of all time.</p>
+        </div>
+
+        <div class="Editabledesc">
+            <textarea id="editablearea" style="height: 400px; width: 100%; visibility: hidden; display: none;"></textarea>
+        </div>
+
+
+        <div class="footer">
+            <div class="LikeSection">
+                <div  onclick="postLiked()" class="LikeBtn">
+                    <i class="fa fa-thumbs-up" aria-hidden="true"></i><span id="likeBlog">&nbspLike</span> 
+                </div>
+
+                <div class="countLikes">
+                    <span id="likeCount">Be the first one to like this!</span>
+                </div>
+                
+            </div>
+
+
+            <div class="CommentSection">
+                <div class="CommentBox">
+                    <label for="commentArea"></label>
+                    <textarea id="cmntText" placeholder="Leave a comment..." style="height: 120px; width: 100%"></textarea>
+                </div>
+                
+            </div>
+
+        
+
+            <div class="userComments">
+                <div class="CommentBtn" id="addList" onclick="addComments(cmntText)">Comment</div>
+            </div>
+
+            <div>
+                <h5 class="commentHeading">All Comments</h5>
+            </div>
+
+
+            <div id="viewComments">
+                <div id="addEventNames"></div>
+            </div>
+            
+            
+
+        </div>
+
+        </div>
+           
+        
+    </div>
+    
+
+
+
+
+    
+
+    <!--Bootstrap JavaScript Libraries-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
+    <!--Font Awsome Scripts-->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
